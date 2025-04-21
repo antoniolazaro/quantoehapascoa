@@ -1,4 +1,4 @@
-export function calcularPascoa(ano) {
+export function calcularPascoa(ano: number) {
   const a = ano % 19;
   const b = Math.floor(ano / 100);
   const c = ano % 100;
@@ -16,13 +16,13 @@ export function calcularPascoa(ano) {
   return new Date(ano, mes, dia);
 }
 
-export function deslocarDias(data, dias) {
+export function deslocarDias(data: Date, dias: number) {
   const novaData = new Date(data);
   novaData.setDate(novaData.getDate() + dias);
   return novaData;
 }
 
-export function formatarDistanciaDaPascoa(dias) {
+export function formatarDistanciaDaPascoa(dias: number) {
   if (dias === 0) return "No dia da Páscoa";
   const plural = Math.abs(dias) > 1 ? "dias" : "dia";
   return dias < 0
